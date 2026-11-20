@@ -1,0 +1,156 @@
+
+/* =================================
+   DJERBA - RESPONSIVE DESIGN
+================================= */
+
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+}
+
+
+/* MOBILE PHONES */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    section {
+        padding: 45px 0;
+    }
+
+    .btn {
+        padding: 11px 20px;
+    }
+
+}
+
+/* =================================
+   HOMEPAGE RESPONSIVENESS
+================================= */
+
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 650px;
+        min-height: 550px;
+    }
+
+    .intro-grid {
+        gap: 35px;
+    }
+
+    .intro-image img {
+        height: 350px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        gap: 15px;
+    }
+
+    .main-nav {
+        gap: 12px;
+    }
+
+    .main-nav > a,
+    .nav-dropdown > a {
+        font-size: 11px;
+    }
+
+    .hero {
+        height: 600px;
+        min-height: 500px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero-bottom {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .intro-image img {
+        height: 300px;
+    }
+
+    .heritage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .heritage-card img {
+        height: 230px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+}

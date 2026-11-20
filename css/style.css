@@ -1,0 +1,120 @@
+
+/* =================================
+   DJERBA WEBSITE - GLOBAL STYLES
+================================= */
+
+/* 1. COLOR PALETTE */
+
+:root {
+    --color-sand: #F3EBDD;
+    --color-linen: #D9C9A8;
+    --color-sea: #174C55;
+    --color-terracotta: #B77C51;
+    --color-olive: #293A32;
+
+    --color-white: #FFFFFF;
+    --color-muted: #77766D;
+
+    /* 2. TYPOGRAPHY */
+
+    --font-heading: Georgia, serif;
+    --font-body: Arial, sans-serif;
+
+    /* 3. SPACING */
+
+    --space-small: 12px;
+    --space-medium: 24px;
+    --space-large: 48px;
+
+    /* 4. LAYOUT */
+
+    --container-width: 1200px;
+    --border-radius: 8px;
+}
+
+
+/* 5. RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 6. GLOBAL BODY */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-sand);
+    color: var(--color-olive);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* 7. HEADINGS */
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: normal;
+    line-height: 1.2;
+    color: var(--color-olive);
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+
+/* 8. LINKS */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* 9. IMAGES */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 10. MAIN CONTAINER */
+
+.container {
+    width: min(90%, var(--container-width));
+    margin-inline: auto;
+}
+
+
+/* 11. SECTIONS */
+
+section {
+    padding: 80px 0;
+}
+
+
+/* 12. SELECTION */
+
+::selection {
+    background-color: var(--color-sea);
+    color: var(--color-white);
+}
+    

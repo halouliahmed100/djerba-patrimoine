@@ -1,0 +1,906 @@
+
+/* =================================
+   DJERBA - REUSABLE COMPONENTS
+================================= */
+
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+
+    background-color: var(--color-sea);
+    color: var(--color-white);
+
+    border: 1px solid var(--color-sea);
+    border-radius: 4px;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-sea);
+}
+
+
+/* SECTION LABELS */
+
+.section-label {
+    display: inline-block;
+
+    color: var(--color-terracotta);
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+
+/* CARDS */
+
+.card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    padding: 24px;
+}
+
+
+/* DIVIDERS */
+
+.divider {
+    width: 60px;
+    height: 2px;
+
+    background-color: var(--color-terracotta);
+
+    margin: 20px 0;
+}
+
+/* =================================
+   DJERBA - HOMEPAGE COMPONENTS
+================================= */
+
+
+/* NAVIGATION BAR */
+
+.site-header {
+    width: 100%;
+    background-color: var(--color-sand);
+    border-bottom: 1px solid rgba(41, 58, 50, 0.12);
+    position: relative;
+    z-index: 100;
+}
+
+.nav-container {
+    min-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--color-sea);
+}
+
+.logo span {
+    color: var(--color-terracotta);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-nav > a,
+.nav-dropdown > a {
+    font-size: 13px;
+    color: var(--color-olive);
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--color-terracotta);
+}
+
+
+/* DROPDOWN MENU */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    padding: 10px;
+    background: var(--color-white);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu a {
+    padding: 12px;
+    font-size: 13px;
+}
+
+.dropdown-menu a:hover {
+    background: var(--color-sand);
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 680px;
+    height: 85vh;
+    max-height: 850px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background-image:
+        url("../assets/images/accueil/djerba-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(20, 40, 38, 0.78),
+        rgba(20, 40, 38, 0.15)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--color-white);
+}
+
+.hero-label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    color: var(--color-linen);
+}
+
+.hero h1 {
+    color: var(--color-white);
+    font-size: clamp(52px, 7vw, 90px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    max-width: 500px;
+    margin-bottom: 35px;
+    font-size: 17px;
+}
+
+.hero-btn {
+    background: var(--color-linen);
+    border-color: var(--color-linen);
+    color: var(--color-olive);
+}
+
+.hero-btn:hover {
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 5%;
+    right: 5%;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--color-white);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* INTRODUCTION */
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.intro-text p {
+    margin-bottom: 20px;
+    color: var(--color-muted);
+}
+
+.intro-text h2 {
+    max-width: 500px;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--color-sea);
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-terracotta);
+    padding-bottom: 5px;
+}
+
+
+/* HERITAGE SECTION */
+
+.heritage {
+    background: var(--color-linen);
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-heading .divider {
+    margin: 20px auto;
+}
+
+.section-heading p {
+    color: var(--color-muted);
+    margin-top: 15px;
+}
+
+.heritage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.heritage-card {
+    background: var(--color-sand);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.heritage-card:hover {
+    transform: translateY(-7px);
+}
+
+.heritage-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-number {
+    color: var(--color-terracotta);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+}
+
+.card-content p {
+    color: var(--color-muted);
+}
+
+
+/* FOOTER */
+
+.site-footer {
+    background: var(--color-olive);
+    color: var(--color-sand);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-logo {
+    color: var(--color-sand);
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    font-size: 13px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(243, 235, 221, 0.2);
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 12px;
+    color: var(--color-linen);
+}
+
+/* GEOGRAPHY PAGE */
+
+.page-hero {
+    position: relative;
+    min-height: 550px;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-sea);
+}
+
+.geo-hero {
+    background-image: url("../assets/images/accueil/djerba-hero.jpg");
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--color-white);
+}
+
+.page-hero-content h1 {
+    color: var(--color-white);
+    font-size: clamp(42px, 6vw, 76px);
+    margin: 20px 0;
+}
+
+.page-hero-content p {
+    max-width: 550px;
+    color: var(--color-white);
+}
+
+.geo-introduction {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.geo-introduction h2,
+.geo-conclusion h2 {
+    margin-bottom: 20px;
+}
+
+.geo-introduction .divider {
+    margin: 20px auto;
+}
+
+.geo-details {
+    background-color: var(--color-linen);
+}
+
+.geo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.geo-card {
+    background-color: var(--color-sand);
+    padding: 35px;
+    min-height: 240px;
+}
+
+.geo-card h3 {
+    margin: 20px 0 15px;
+}
+
+.geo-card p {
+    color: var(--color-muted);
+}
+
+.geo-conclusion {
+    text-align: center;
+}
+
+.geo-conclusion p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+@media (max-width: 700px) {
+    .geo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        min-height: 500px;
+    }
+}
+
+/* GEOGRAPHY PAGE */
+
+.page-banner {
+    background-color: var(--color-sea);
+    color: var(--color-white);
+    padding: 100px 0;
+}
+
+.page-banner h1 {
+    color: var(--color-white);
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.page-banner p {
+    color: var(--color-sand);
+    font-size: 18px;
+}
+
+.page-banner .section-label {
+    color: var(--color-linen);
+}
+
+main > section:not(.page-banner) p {
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+/* HISTORY PAGE */
+
+.history-period {
+    border-left: 2px solid var(--color-terracotta);
+    padding-left: 25px;
+    margin-top: 25px;
+}
+
+.history-period h3 {
+    margin-bottom: 12px;
+    color: var(--color-sea);
+}
+
+/* MATERIAL HERITAGE PAGE */
+
+.material-heritage {
+    background-color: #EDE3D2;
+}
+
+.material-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.material-card {
+    position: relative;
+    background-color: var(--color-white);
+    padding: 35px;
+    border-radius: var(--border-radius);
+    border-bottom: 3px solid var(--color-terracotta);
+    transition: transform 0.3s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-6px);
+}
+
+.material-number {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    color: var(--color-linen);
+    margin-bottom: 20px;
+}
+
+.material-card h3 {
+    margin-bottom: 15px;
+}
+
+.material-card p {
+    color: var(--color-muted);
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .material-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .material-card {
+        padding: 25px;
+    }
+}
+
+/* MATERIAL HERITAGE IMAGES */
+
+.material-image {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.material-card {
+    padding: 0;
+}
+
+.material-card .material-number,
+.material-card .card-content {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.material-card .material-number {
+    margin-top: 20px;
+}
+
+.material-card .card-content {
+    padding: 0 0 30px;
+}
+
+@media (max-width: 600px) {
+    .material-image {
+        height: 220px;
+    }
+}
+
+/* INTANGIBLE HERITAGE PAGE */
+
+.intangible-heritage {
+    background-color: #EDE3D2;
+}
+
+.intangible-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.intangible-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.intangible-card:hover {
+    transform: translateY(-6px);
+}
+
+.intangible-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.intangible-card .card-content {
+    padding: 28px;
+}
+
+.intangible-card h3 {
+    margin-bottom: 15px;
+}
+
+.intangible-card p {
+    color: var(--color-muted);
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .intangible-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intangible-image {
+        height: 220px;
+    }
+}
+
+/* VALORISATION PAGE */
+
+.valorisation-section {
+    background-color: #EDE3D2;
+}
+
+.valorisation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.valorisation-card {
+    background-color: var(--color-white);
+    padding: 35px;
+    border-radius: var(--border-radius);
+    border-bottom: 3px solid var(--color-terracotta);
+    transition: transform 0.3s ease;
+}
+
+.valorisation-card:hover {
+    transform: translateY(-6px);
+}
+
+.valorisation-number {
+    font-family: var(--font-heading);
+    font-size: 46px;
+    color: var(--color-linen);
+    margin-bottom: 20px;
+}
+
+.valorisation-card h3 {
+    margin-bottom: 15px;
+}
+
+.valorisation-card p {
+    color: var(--color-muted);
+    font-size: 15px;
+}
+
+@media (max-width: 900px) {
+    .valorisation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .valorisation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valorisation-card {
+        padding: 25px;
+    }
+}
+.valorisation-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+}
+
+/* RISKS PAGE */
+
+.risks-section {
+    background-color: #EDE3D2;
+}
+
+.risks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.risk-card {
+    background-color: var(--color-white);
+    padding: 35px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--color-terracotta);
+    transition: transform 0.3s ease;
+}
+
+.risk-card:hover {
+    transform: translateY(-5px);
+}
+
+.risk-number {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    color: var(--color-linen);
+    margin-bottom: 15px;
+}
+
+.risk-card h3 {
+    margin-bottom: 15px;
+}
+
+.risk-card p {
+    color: var(--color-muted);
+    font-size: 15px;
+}
+
+.risk-conclusion {
+    background-color: var(--color-sea);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.risk-conclusion h2 {
+    color: var(--color-white);
+    margin-bottom: 25px;
+}
+
+.risk-conclusion p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--color-white);
+}
+
+@media (max-width: 600px) {
+    .risks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .risk-card {
+        padding: 25px;
+    }
+}
+.risk-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+}
+
+/* SOURCES PAGE */
+
+.sources-section {
+    background-color: var(--color-sand);
+}
+
+.inp-section {
+    background-color: #EDE3D2;
+}
+
+.sources-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.source-card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border-bottom: 3px solid var(--color-terracotta);
+    transition: transform 0.3s ease;
+}
+
+.source-card:hover {
+    transform: translateY(-5px);
+}
+
+.source-type {
+    display: inline-block;
+    color: var(--color-terracotta);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.source-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.source-card p {
+    color: var(--color-muted);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.source-card a {
+    color: var(--color-sea);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.source-card a:hover {
+    color: var(--color-terracotta);
+}
+
+@media (max-width: 600px) {
+    .sources-list {
+        grid-template-columns: 1fr;
+    }
+
+    .source-card {
+        padding: 25px;
+    }
+}
+
+/* GEOGRAPHY MAP */
+
+.geography-map {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.geography-map iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .geography-map {
+        height: 280px;
+    }
+}
+/* GEOGRAPHY IMAGES */
+
+.geography-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .geography-image {
+        height: 220px;
+    }
+}
+/* History page images */
+
+.history-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin: 25px 0 35px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 600px) {
+    .history-image {
+        height: 220px;
+    }
+}
